@@ -22,7 +22,7 @@ spec:
     spec:
       containers:
         - image: harbor.edu.cn/nju13/demo:{VERSION}
-          name: nju13-demo
+          name: demo
 ---
 apiVersion: v1
 kind: Service

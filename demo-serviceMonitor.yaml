@@ -4,7 +4,7 @@ metadata:
   labels:
     k8s-app: nju13-demo
   name: nju13-demo
-  namespace: monitoring
+  namespace: nju13
 spec:
   endpoints:
     - interval: 30s

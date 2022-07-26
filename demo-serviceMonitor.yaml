@@ -16,4 +16,4 @@ spec:
       app: nju13-demo
   namespaceSelector:
     matchNames:
-      - default
+      - nju13

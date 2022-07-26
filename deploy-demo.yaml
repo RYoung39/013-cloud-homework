@@ -2,14 +2,14 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    app: demo
-  name: demo
+    app: nju13-demo
+  name: nju13-demo
   namespace: nju13
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: demo
+      app: nju13-demo
   template:
     metadata:
       annotations:
@@ -18,23 +18,23 @@ spec:
         prometheus.io/scheme: http
         prometheus.io/scrape: "true"
       labels:
-        app: demo
+        app: nju13-demo
     spec:
       containers:
         - image: harbor.edu.cn/nju13/demo:{VERSION}
-          name: demo
+          name: nju13-demo
 ---
 apiVersion: v1
 kind: Service
 metadata:
-  name: demo
+  name: nju13-demo
   namespace: nju13
   labels:
-    app: demo
+    app: nju13-demo
 spec:
   type: NodePort
   selector:
-    app: demo
+    app: nju13-demo
   ports:
     - name: tcp
       protocol: TCP

@@ -12,11 +12,6 @@ spec:
       app: nju13-demo
   template:
     metadata:
-      annotations:
-        prometheus.io/path: /actuator/prometheus
-        prometheus.io/port: "8998"
-        prometheus.io/scheme: http
-        prometheus.io/scrape: "true"
       labels:
         app: nju13-demo
     spec:
@@ -38,5 +33,5 @@ spec:
   ports:
     - name: tcp
       protocol: TCP
-      port: 8998
+      port: 8080
       targetPort: 8080
